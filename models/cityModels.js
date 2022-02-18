@@ -18,7 +18,7 @@ const getAll = () => {
 const update = (cityId, bodyCity) => {
   return knex
     .update(bodyCity)
-    .from("country")
+    .from("city")
     .where({ city_id: cityId })
     .returning(["city_id", "city", "country_id", "last_update"]);
 };

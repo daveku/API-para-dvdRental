@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const cityControllers = "../../controllers/actorControllers";
+const cityControllers = require("../../controllers/cityControllers");
 
 router.post("/", cityControllers.createCity);
 router.get("/:id", cityControllers.getOneCity);
